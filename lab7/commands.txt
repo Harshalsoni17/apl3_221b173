@@ -1,0 +1,68 @@
+1. Run Hello-World
+bash
+Copy
+Edit
+>docker run hello-world
+Verifies Docker is working.
+
+2. Pull Hello-World Image
+bash
+Copy
+Edit
+>docker pull hello-world
+Downloads the hello-world image.
+
+3. Pull Ubuntu Image
+bash
+Copy
+Edit
+>docker pull ubuntu
+Downloads the ubuntu image.
+
+4. Run Ubuntu Container (Interactive)
+bash
+Copy
+Edit
+>docker run -it ubuntu
+Starts Ubuntu in interactive mode.
+
+5. Create Directory and File in Ubuntu Container
+bash
+Copy
+Edit
+>ls
+>mkdir juet
+>cd juet
+>touch emp
+>ls
+>exit
+ls: List files.
+
+>mkdir juet: Create juet directory.
+
+>cd juet: Enter directory.
+
+>touch emp: Create emp file.
+
+exit: Exit container.
+
+6. List Docker Networks
+bash
+Copy
+Edit
+>docker network ls
+Shows available networks.
+
+7. Create Docker Network
+bash
+Copy
+Edit
+>docker network create mongo-network
+Creates mongo-network network.
+
+8. Run Container with Port Mapping
+bash
+Copy
+Edit
+>docker run -d -p 8081:8081 --name mongo-express --network mongo-network mongo-express
+Runs container in detached mode, maps ports, and connects to mongo-network.
